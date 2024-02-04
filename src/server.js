@@ -6,6 +6,7 @@ import http from "http";
 const PORT = process.env.PORT || 3000;
 
 const app = express();
+app.use('/image', express.static(__dirname + '/image'));
 
 app.set("view engine", "pug");
 app.set("views", process.cwd() + "/src/views");
